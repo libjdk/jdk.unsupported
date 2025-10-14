@@ -1,0 +1,10 @@
+com.sun.nio.file.ExtendedCopyOption
+com.sun.nio.file.ExtendedOpenOption
+com.sun.nio.file.ExtendedWatchEventModifier
+com.sun.nio.file.SensitivityWatchEventModifier
+sun.misc.Signal
+sun.misc.Signal$InternalMiscHandler
+sun.misc.Signal$SunMiscHandler
+sun.misc.SignalHandler
+sun.misc.Unsafe
+sun.reflect.ReflectionFactory
