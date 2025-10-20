@@ -158,6 +158,7 @@ bool ReflectionFactory::hasStaticInitializerForSerialization($Class* cl) {
 }
 
 $OptionalDataException* ReflectionFactory::newOptionalDataExceptionForSerialization(bool bool$) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($Constructor, cons, $nc(ReflectionFactory::delegate)->newOptionalDataExceptionForSerialization());
 	try {

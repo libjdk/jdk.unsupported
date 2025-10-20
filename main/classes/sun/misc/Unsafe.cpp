@@ -870,6 +870,7 @@ void Unsafe::freeMemory(int64_t address) {
 }
 
 int64_t Unsafe::objectFieldOffset($Field* f) {
+	$useLocalCurrentObjectStackCache();
 	if (f == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -884,6 +885,7 @@ int64_t Unsafe::objectFieldOffset($Field* f) {
 }
 
 int64_t Unsafe::staticFieldOffset($Field* f) {
+	$useLocalCurrentObjectStackCache();
 	if (f == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -898,6 +900,7 @@ int64_t Unsafe::staticFieldOffset($Field* f) {
 }
 
 $Object* Unsafe::staticFieldBase($Field* f) {
+	$useLocalCurrentObjectStackCache();
 	if (f == nullptr) {
 		$throwNew($NullPointerException);
 	}

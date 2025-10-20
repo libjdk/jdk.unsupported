@@ -104,6 +104,7 @@ void Signal::init$($String* name) {
 $SignalHandler* Signal::handle(Signal* sig, $SignalHandler* handler) {
 	$load(Signal);
 	$synchronized(class$) {
+		$useLocalCurrentObjectStackCache();
 		$var($Signal$Handler, oldHandler, $Signal::handle($nc(sig)->iSignal, $($Signal$InternalMiscHandler::of(sig, handler))));
 		return $Signal$SunMiscHandler::of($nc(sig)->iSignal, oldHandler);
 	}
