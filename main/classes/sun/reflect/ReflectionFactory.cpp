@@ -1,27 +1,15 @@
 #include <sun/reflect/ReflectionFactory.h>
 
 #include <java/io/OptionalDataException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationException.h>
 #include <java/lang/InternalError.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/RuntimePermission.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessController.h>
 #include <java/security/BasicPermission.h>
 #include <java/security/Permission.h>
@@ -163,14 +151,11 @@ $OptionalDataException* ReflectionFactory::newOptionalDataExceptionForSerializat
 	$var($Constructor, cons, $nc(ReflectionFactory::delegate)->newOptionalDataExceptionForSerialization());
 	try {
 		return $cast($OptionalDataException, $nc(cons)->newInstance($$new($ObjectArray, {$($of($Boolean::valueOf(bool$)))})));
-	} catch ($InstantiationException&) {
-		$var($ReflectiveOperationException, ex, $catch());
+	} catch ($InstantiationException& ex) {
 		$throwNew($InternalError, "unable to create OptionalDataException"_s, ex);
-	} catch ($IllegalAccessException&) {
-		$var($ReflectiveOperationException, ex, $catch());
+	} catch ($IllegalAccessException& ex) {
 		$throwNew($InternalError, "unable to create OptionalDataException"_s, ex);
-	} catch ($InvocationTargetException&) {
-		$var($ReflectiveOperationException, ex, $catch());
+	} catch ($InvocationTargetException& ex) {
 		$throwNew($InternalError, "unable to create OptionalDataException"_s, ex);
 	}
 	$shouldNotReachHere();

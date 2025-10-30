@@ -1,22 +1,9 @@
 #include <sun/misc/Unsafe.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Field.h>
-#include <java/lang/reflect/Method.h>
 #include <java/nio/ByteBuffer.h>
 #include <java/util/Set.h>
 #include <jdk/internal/misc/Unsafe.h>
@@ -654,43 +641,24 @@ $Object* allocate$Unsafe($Class* clazz) {
 
 Unsafe* Unsafe::theUnsafe = nullptr;
 $Unsafe* Unsafe::theInternalUnsafe = nullptr;
-
 int32_t Unsafe::ARRAY_BOOLEAN_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_BYTE_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_SHORT_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_CHAR_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_INT_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_LONG_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_FLOAT_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_DOUBLE_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_OBJECT_BASE_OFFSET = 0;
-
 int32_t Unsafe::ARRAY_BOOLEAN_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_BYTE_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_SHORT_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_CHAR_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_INT_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_LONG_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_FLOAT_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_DOUBLE_INDEX_SCALE = 0;
-
 int32_t Unsafe::ARRAY_OBJECT_INDEX_SCALE = 0;
-
 int32_t Unsafe::ADDRESS_SIZE = 0;
 
 void Unsafe::init$() {

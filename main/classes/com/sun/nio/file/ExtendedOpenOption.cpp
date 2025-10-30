@@ -1,14 +1,6 @@
 #include <com/sun/nio/file/ExtendedOpenOption.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/nio/file/OpenOption.h>
 #include <jdk/internal/misc/FileSystemOption.h>
 #include <jcpp.h>
@@ -87,13 +79,9 @@ void ExtendedOpenOption::finalize() {
 	this->$Enum::finalize();
 }
 
-
 ExtendedOpenOption* ExtendedOpenOption::NOSHARE_READ = nullptr;
-
 ExtendedOpenOption* ExtendedOpenOption::NOSHARE_WRITE = nullptr;
-
 ExtendedOpenOption* ExtendedOpenOption::NOSHARE_DELETE = nullptr;
-
 ExtendedOpenOption* ExtendedOpenOption::DIRECT = nullptr;
 $ExtendedOpenOptionArray* ExtendedOpenOption::$VALUES = nullptr;
 
