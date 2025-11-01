@@ -28,7 +28,6 @@ class $import ExtendedCopyOption : public ::java::lang::Enum, public ::java::nio
 	$class(ExtendedCopyOption, 0, ::java::lang::Enum, ::java::nio::file::CopyOption)
 public:
 	ExtendedCopyOption();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	static $Array<::com::sun::nio::file::ExtendedCopyOption>* $values();
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

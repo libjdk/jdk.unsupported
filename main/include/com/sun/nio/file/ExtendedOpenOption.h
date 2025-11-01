@@ -34,7 +34,6 @@ class $import ExtendedOpenOption : public ::java::lang::Enum, public ::java::nio
 	$class(ExtendedOpenOption, 0, ::java::lang::Enum, ::java::nio::file::OpenOption)
 public:
 	ExtendedOpenOption();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	static $Array<::com::sun::nio::file::ExtendedOpenOption>* $values();
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

@@ -32,7 +32,6 @@ class $import SensitivityWatchEventModifier : public ::java::lang::Enum, public 
 	$class(SensitivityWatchEventModifier, 0, ::java::lang::Enum, ::java::nio::file::WatchEvent$Modifier)
 public:
 	SensitivityWatchEventModifier();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	static $Array<::com::sun::nio::file::SensitivityWatchEventModifier>* $values();
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
